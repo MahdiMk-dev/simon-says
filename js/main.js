@@ -4,6 +4,7 @@ const AUDIO = {
   red: new Audio('./sounds/red.mp3'),
   blue: new Audio('./sounds/blue.mp3'),
   yellow: new Audio('./sounds/yellow.mp3')
+
 };
 
 let gamePattern = [];
@@ -32,6 +33,7 @@ function startGame() {
 function nextSequence() {
   if (level >= 12) {
     win()
+    return
   }
   level++;
   document.getElementById('level').textContent = level;
